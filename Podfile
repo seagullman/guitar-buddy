@@ -7,7 +7,9 @@ target 'GuitarBuddy' do
 
   # Pods for GuitarBuddy
   pod 'Firebase/Core',        '4.7.0'
-  
+  pod 'FirebaseAuth',         '4.4.0'
+  pod 'FirebaseDatabase',     '4.1.2'
+
   target 'GuitarBuddyTests' do
     inherit! :search_paths
     # Pods for testing

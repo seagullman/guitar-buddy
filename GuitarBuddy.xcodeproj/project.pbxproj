@@ -24,6 +24,15 @@
 		442B09A31FD87BC6004EDF48 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B09A21FD87BC6004EDF48 /* Initial.storyboard */; };
 		442B09A51FD87C36004EDF48 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B09A41FD87C36004EDF48 /* Setup.storyboard */; };
 		442B09A71FD87C80004EDF48 /* Authenticated.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B09A61FD87C80004EDF48 /* Authenticated.storyboard */; };
+		442B09A91FD88415004EDF48 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09A81FD88415004EDF48 /* CreateAccountViewController.swift */; };
+		442B09B11FD8869F004EDF48 /* GuitarBuddyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09B01FD8869F004EDF48 /* GuitarBuddyClient.swift */; };
+		442B09B41FD8870B004EDF48 /* GBClientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09B31FD8870B004EDF48 /* GBClientResponse.swift */; };
+		442B09B61FD89EC9004EDF48 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09B51FD89EC9004EDF48 /* CreateAccountRequest.swift */; };
+		442B09B81FD8A0CD004EDF48 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09B71FD8A0CD004EDF48 /* Environment.swift */; };
+		442B09BE1FD8A3F9004EDF48 /* GuitarBuddyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09BD1FD8A3F9004EDF48 /* GuitarBuddyUser.swift */; };
+		44DBD8C61FD8A4BB0023D2CC /* GuitarBuddyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD8C51FD8A4BB0023D2CC /* GuitarBuddyError.swift */; };
+		44DBD8C81FD8A6DA0023D2CC /* CreateAccountCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD8C71FD8A6DA0023D2CC /* CreateAccountCommand.swift */; };
+		44DBD8CA1FD8AEF60023D2CC /* UIViewController+GuitarBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD8C91FD8AEF60023D2CC /* UIViewController+GuitarBuddy.swift */; };
 		76E493BC3A9F47A27AF9902C /* Pods_GuitarBuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887E73AEDB2ECC7BBE10482F /* Pods_GuitarBuddyUITests.framework */; };
 		D737A225D27A788791EB79E4 /* Pods_GuitarBuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCFD18386EDAC88B0E2BF8D /* Pods_GuitarBuddyTests.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +114,15 @@
 		442B09A21FD87BC6004EDF48 /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
 		442B09A41FD87C36004EDF48 /* Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		442B09A61FD87C80004EDF48 /* Authenticated.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticated.storyboard; sourceTree = "<group>"; };
+		442B09A81FD88415004EDF48 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		442B09B01FD8869F004EDF48 /* GuitarBuddyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarBuddyClient.swift; sourceTree = "<group>"; };
+		442B09B31FD8870B004EDF48 /* GBClientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBClientResponse.swift; sourceTree = "<group>"; };
+		442B09B51FD89EC9004EDF48 /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
+		442B09B71FD8A0CD004EDF48 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		442B09BD1FD8A3F9004EDF48 /* GuitarBuddyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarBuddyUser.swift; sourceTree = "<group>"; };
+		44DBD8C51FD8A4BB0023D2CC /* GuitarBuddyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarBuddyError.swift; sourceTree = "<group>"; };
+		44DBD8C71FD8A6DA0023D2CC /* CreateAccountCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCommand.swift; sourceTree = "<group>"; };
+		44DBD8C91FD8AEF60023D2CC /* UIViewController+GuitarBuddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GuitarBuddy.swift"; sourceTree = "<group>"; };
 		67C86E8E7BEE731E94826030 /* Pods-GuitarBuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuitarBuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuitarBuddyTests/Pods-GuitarBuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		887E73AEDB2ECC7BBE10482F /* Pods_GuitarBuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuitarBuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB2FFC0326577749A405E9E /* Pods-GuitarBuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuitarBuddyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuitarBuddyUITests/Pods-GuitarBuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +220,7 @@
 			children = (
 				440F88671FD86ED400806B5F /* AppDelegate.swift */,
 				440F88731FD86ED400806B5F /* Info.plist */,
+				442B09B71FD8A0CD004EDF48 /* Environment.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -242,6 +261,7 @@
 		440F88991FD86F9400806B5F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				44DBD8C51FD8A4BB0023D2CC /* GuitarBuddyError.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -256,6 +276,9 @@
 		440F889B1FD86FD600806B5F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				442B09B31FD8870B004EDF48 /* GBClientResponse.swift */,
+				442B09B51FD89EC9004EDF48 /* CreateAccountRequest.swift */,
+				442B09BD1FD8A3F9004EDF48 /* GuitarBuddyUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +286,7 @@
 		440F889C1FD86FDE00806B5F /* WebServiceClient */ = {
 			isa = PBXGroup;
 			children = (
+				442B09B01FD8869F004EDF48 /* GuitarBuddyClient.swift */,
 			);
 			path = WebServiceClient;
 			sourceTree = "<group>";
@@ -277,6 +301,7 @@
 		440F889E1FD8700C00806B5F /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				44DBD8C71FD8A6DA0023D2CC /* CreateAccountCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -301,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				442B099E1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift */,
+				44DBD8C91FD8AEF60023D2CC /* UIViewController+GuitarBuddy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +354,7 @@
 			children = (
 				440F88691FD86ED400806B5F /* ViewController.swift */,
 				442B09A01FD87B6C004EDF48 /* InitialViewController.swift */,
+				442B09A81FD88415004EDF48 /* CreateAccountViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -587,12 +614,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GuitarBuddy/Pods-GuitarBuddy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,11 +734,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442B09B41FD8870B004EDF48 /* GBClientResponse.swift in Sources */,
+				442B09A91FD88415004EDF48 /* CreateAccountViewController.swift in Sources */,
+				44DBD8C81FD8A6DA0023D2CC /* CreateAccountCommand.swift in Sources */,
+				442B09B61FD89EC9004EDF48 /* CreateAccountRequest.swift in Sources */,
+				442B09B11FD8869F004EDF48 /* GuitarBuddyClient.swift in Sources */,
 				442B09A11FD87B6C004EDF48 /* InitialViewController.swift in Sources */,
 				442B099F1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift in Sources */,
 				440F886A1FD86ED400806B5F /* ViewController.swift in Sources */,
 				442B099C1FD87988004EDF48 /* LaunchFlowController.swift in Sources */,
+				44DBD8CA1FD8AEF60023D2CC /* UIViewController+GuitarBuddy.swift in Sources */,
 				440F88681FD86ED400806B5F /* AppDelegate.swift in Sources */,
+				442B09B81FD8A0CD004EDF48 /* Environment.swift in Sources */,
+				442B09BE1FD8A3F9004EDF48 /* GuitarBuddyUser.swift in Sources */,
+				44DBD8C61FD8A4BB0023D2CC /* GuitarBuddyError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +915,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/GuitarBuddy/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seagullman.GuitarBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -893,6 +934,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/GuitarBuddy/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seagullman.GuitarBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
