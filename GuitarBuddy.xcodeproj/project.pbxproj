@@ -10,7 +10,6 @@
 		34136B76BD481933CAB67402 /* Pods_GuitarBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C615A1C84718E4F5AF4CDDCE /* Pods_GuitarBuddy.framework */; };
 		440F88681FD86ED400806B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F88671FD86ED400806B5F /* AppDelegate.swift */; };
 		440F886A1FD86ED400806B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F88691FD86ED400806B5F /* ViewController.swift */; };
-		440F886D1FD86ED400806B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440F886B1FD86ED400806B5F /* Main.storyboard */; };
 		440F886F1FD86ED400806B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440F886E1FD86ED400806B5F /* Assets.xcassets */; };
 		440F88721FD86ED400806B5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440F88701FD86ED400806B5F /* LaunchScreen.storyboard */; };
 		440F887D1FD86ED500806B5F /* GuitarBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440F887C1FD86ED500806B5F /* GuitarBuddyTests.swift */; };
@@ -18,6 +17,13 @@
 		440F88A81FD8708E00806B5F /* update_acknowledgements_html.sh in Resources */ = {isa = PBXBuildFile; fileRef = 440F88A71FD8708E00806B5F /* update_acknowledgements_html.sh */; };
 		442B09901FD87324004EDF48 /* SPRingboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B098D1FD872E8004EDF48 /* SPRingboard.framework */; };
 		442B09911FD87324004EDF48 /* SPRingboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 442B098D1FD872E8004EDF48 /* SPRingboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		442B09961FD87837004EDF48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 442B09951FD87837004EDF48 /* GoogleService-Info.plist */; };
+		442B099C1FD87988004EDF48 /* LaunchFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B099B1FD87988004EDF48 /* LaunchFlowController.swift */; };
+		442B099F1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B099E1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift */; };
+		442B09A11FD87B6C004EDF48 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B09A01FD87B6C004EDF48 /* InitialViewController.swift */; };
+		442B09A31FD87BC6004EDF48 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B09A21FD87BC6004EDF48 /* Initial.storyboard */; };
+		442B09A51FD87C36004EDF48 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B09A41FD87C36004EDF48 /* Setup.storyboard */; };
+		442B09A71FD87C80004EDF48 /* Authenticated.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B09A61FD87C80004EDF48 /* Authenticated.storyboard */; };
 		76E493BC3A9F47A27AF9902C /* Pods_GuitarBuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887E73AEDB2ECC7BBE10482F /* Pods_GuitarBuddyUITests.framework */; };
 		D737A225D27A788791EB79E4 /* Pods_GuitarBuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCFD18386EDAC88B0E2BF8D /* Pods_GuitarBuddyTests.framework */; };
 /* End PBXBuildFile section */
@@ -81,7 +87,6 @@
 		440F88641FD86ED400806B5F /* GuitarBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		440F88671FD86ED400806B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		440F88691FD86ED400806B5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		440F886C1FD86ED400806B5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		440F886E1FD86ED400806B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		440F88711FD86ED400806B5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		440F88731FD86ED400806B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +98,13 @@
 		440F88891FD86ED500806B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		440F88A71FD8708E00806B5F /* update_acknowledgements_html.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update_acknowledgements_html.sh; sourceTree = "<group>"; };
 		442B09871FD872E8004EDF48 /* SPRingboard.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SPRingboard.xcodeproj; path = Vendor/SPR/SPRingboard/SPRingboard.xcodeproj; sourceTree = "<group>"; };
+		442B09951FD87837004EDF48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		442B099B1FD87988004EDF48 /* LaunchFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFlowController.swift; sourceTree = "<group>"; };
+		442B099E1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+GuitarBuddy.swift"; sourceTree = "<group>"; };
+		442B09A01FD87B6C004EDF48 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		442B09A21FD87BC6004EDF48 /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
+		442B09A41FD87C36004EDF48 /* Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
+		442B09A61FD87C80004EDF48 /* Authenticated.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticated.storyboard; sourceTree = "<group>"; };
 		67C86E8E7BEE731E94826030 /* Pods-GuitarBuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuitarBuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuitarBuddyTests/Pods-GuitarBuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		887E73AEDB2ECC7BBE10482F /* Pods_GuitarBuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuitarBuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB2FFC0326577749A405E9E /* Pods-GuitarBuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuitarBuddyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuitarBuddyUITests/Pods-GuitarBuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +168,7 @@
 		440F88661FD86ED400806B5F /* GuitarBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				442B09951FD87837004EDF48 /* GoogleService-Info.plist */,
 				440F88951FD86F6300806B5F /* Application */,
 				440F88A61FD8707D00806B5F /* bin */,
 				440F88961FD86F7D00806B5F /* DomainTier */,
@@ -271,6 +284,7 @@
 		440F889F1FD8702200806B5F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				442B099B1FD87988004EDF48 /* LaunchFlowController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -286,6 +300,7 @@
 		440F88A11FD8703100806B5F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				442B099E1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,7 +316,9 @@
 			isa = PBXGroup;
 			children = (
 				440F88701FD86ED400806B5F /* LaunchScreen.storyboard */,
-				440F886B1FD86ED400806B5F /* Main.storyboard */,
+				442B09A21FD87BC6004EDF48 /* Initial.storyboard */,
+				442B09A41FD87C36004EDF48 /* Setup.storyboard */,
+				442B09A61FD87C80004EDF48 /* Authenticated.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -310,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				440F88691FD86ED400806B5F /* ViewController.swift */,
+				442B09A01FD87B6C004EDF48 /* InitialViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -502,10 +520,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442B09A51FD87C36004EDF48 /* Setup.storyboard in Resources */,
 				440F88721FD86ED400806B5F /* LaunchScreen.storyboard in Resources */,
 				440F88A81FD8708E00806B5F /* update_acknowledgements_html.sh in Resources */,
+				442B09961FD87837004EDF48 /* GoogleService-Info.plist in Resources */,
+				442B09A31FD87BC6004EDF48 /* Initial.storyboard in Resources */,
+				442B09A71FD87C80004EDF48 /* Authenticated.storyboard in Resources */,
 				440F886F1FD86ED400806B5F /* Assets.xcassets in Resources */,
-				440F886D1FD86ED400806B5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,9 +586,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GuitarBuddy/Pods-GuitarBuddy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -677,7 +703,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442B09A11FD87B6C004EDF48 /* InitialViewController.swift in Sources */,
+				442B099F1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift in Sources */,
 				440F886A1FD86ED400806B5F /* ViewController.swift in Sources */,
+				442B099C1FD87988004EDF48 /* LaunchFlowController.swift in Sources */,
 				440F88681FD86ED400806B5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,14 +748,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		440F886B1FD86ED400806B5F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				440F886C1FD86ED400806B5F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		440F88701FD86ED400806B5F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

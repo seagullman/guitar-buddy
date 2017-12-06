@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>514822346841-elivhbmkkl9rc0dbju92sd7pgs9b5jlt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.514822346841-elivhbmkkl9rc0dbju92sd7pgs9b5jlt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAPuedPXFHv7iUwBQe2s5r8N7rPgdFWlHg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>514822346841</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.seagullman.GuitarBuddy</string>
+	<key>PROJECT_ID</key>
+	<string>guitar-buddy</string>
+	<key>STORAGE_BUCKET</key>
+	<string>guitar-buddy.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:514822346841:ios:133584d0c9253301</string>
+	<key>DATABASE_URL</key>
+	<string>https://guitar-buddy.firebaseio.com</string>
+</dict>
+</plist>

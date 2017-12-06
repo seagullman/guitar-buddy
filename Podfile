@@ -6,6 +6,7 @@ target 'GuitarBuddy' do
   use_frameworks!
 
   # Pods for GuitarBuddy
+  pod 'Firebase/Core',        '4.7.0'
   
   target 'GuitarBuddyTests' do
     inherit! :search_paths

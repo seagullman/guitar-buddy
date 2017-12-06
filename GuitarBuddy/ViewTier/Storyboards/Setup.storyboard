@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XTO-34-iwH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0VK-IS-UQP">
+            <objects>
+                <viewController id="XTO-34-iwH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mec-Th-jZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Flow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx1-C9-aha">
+                                <rect key="frame" x="145" y="323" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjY-qs-UNT">
+                                <rect key="frame" x="16" y="593" width="343" height="54"/>
+                                <color key="backgroundColor" red="0.058823529411764705" green="0.65456814236111116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="cj7-0W-mUK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="63p-BV-IaU" kind="presentation" id="CoX-qc-Cg6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jx1-C9-aha" firstAttribute="centerY" secondItem="mec-Th-jZ1" secondAttribute="centerY" id="4fZ-pd-QJp"/>
+                            <constraint firstItem="KjY-qs-UNT" firstAttribute="leading" secondItem="NAy-O3-PnI" secondAttribute="leading" constant="16" id="I56-sd-BKS"/>
+                            <constraint firstItem="NAy-O3-PnI" firstAttribute="trailing" secondItem="KjY-qs-UNT" secondAttribute="trailing" constant="16" id="fYd-wN-nAd"/>
+                            <constraint firstItem="jx1-C9-aha" firstAttribute="centerX" secondItem="mec-Th-jZ1" secondAttribute="centerX" id="hzY-xO-rwi"/>
+                            <constraint firstItem="NAy-O3-PnI" firstAttribute="bottom" secondItem="KjY-qs-UNT" secondAttribute="bottom" constant="20" id="pbm-Pv-Oeg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NAy-O3-PnI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O4s-80-1Zg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8M-gj-uhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="81"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kZ4-fG-z2z">
+            <objects>
+                <viewController id="63p-BV-IaU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GkL-KM-97J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-uX-Zap">
+                                <rect key="frame" x="128" y="323" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ysD-uX-Zap" firstAttribute="centerY" secondItem="GkL-KM-97J" secondAttribute="centerY" id="CO1-6Z-Yjz"/>
+                            <constraint firstItem="ysD-uX-Zap" firstAttribute="centerX" secondItem="GkL-KM-97J" secondAttribute="centerX" id="w79-SA-dfZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTW-2Z-gAA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3d-8a-pE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="81"/>
+        </scene>
+    </scenes>
+</document>
