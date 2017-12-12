@@ -10,5 +10,5 @@ import Foundation
 
 
 public enum GuitarBuddyError: Error {
-    case invalidServerResponse(message: String)
+    case invalidServerResponse
 }

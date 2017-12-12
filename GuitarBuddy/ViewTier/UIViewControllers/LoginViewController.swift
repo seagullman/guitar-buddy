@@ -10,7 +10,21 @@ import UIKit
 
 
 public class LoginViewController: UIViewController,
-                                  CreateAccountCoordinatorDelegate {
+                                  CreateAccountCoordinatorDelegate,
+                                  TextFieldValidatorDelegate {
+    
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
+    
+    private var validator: MultipleTextFieldValidator?
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.validator = MultipleTextFieldValidator()
+        self.validator?.set(textFields: [emailTextField, passwordTextField])
+        self.validator?.delegate = self
+    }
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
@@ -26,10 +40,36 @@ public class LoginViewController: UIViewController,
         }
     }
     
+    // MARK: - IBActions
+    
+    @IBAction func signUserIn() {
+        guard
+            let email = self.emailTextField.text,
+            let password = self.passwordTextField.text
+        else { return }
+        
+        let command = SignInCommand()
+        _ = command.execute(email: email, password: password)
+        .then { (result) in
+            switch result {
+            case .success:
+                self.presentingViewController?.dismiss(animated: true, completion: nil)
+            case .failure:
+                self.presentError(message: "Oops, something went wrong. Please try again.")
+            }
+        }
+    }
+    
     // MARK: - CreateAccountCoordinatorDelegate
     
     public func accountCreated() {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - TextFieldValidatorDelegate
+    
+    public func allFieldsHaveText(validated: Bool) {
+        self.loginButton.isEnabled = true
     }
 
 }

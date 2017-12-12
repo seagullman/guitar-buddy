@@ -10,6 +10,7 @@ import Foundation
 import SPRingboard
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 public enum AuthState {
     case authenticated
@@ -20,6 +21,7 @@ internal protocol GuitarBuddyClient: class {
     func createUser(fromRequest request: CreateAccountRequest) -> FutureResult<CreateUserResponse>
     func getAuthenticationState() -> FutureResult<AuthState>
     func register(fromResponse response: CreateUserResponse) -> FutureResult<Bool>
+    func signIn(withEmail email: String, password: String) -> FutureResult<GuitarBuddyUser>
     func signOut() -> Bool
 }
 
@@ -51,7 +53,7 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
                     deferred.success(value: response)
                 } else {
                     // User's uid is nil
-                    let error = GuitarBuddyError.invalidServerResponse(message: "ERROR: user's uid is nil.")
+                    let error = GuitarBuddyError.invalidServerResponse
                     deferred.failure(error: error)
                 }
             }
@@ -87,6 +89,22 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
         
         userReference.updateChildValues(body)
         deferred.success(value: true)
+        return deferred
+    }
+    
+    internal func signIn(withEmail email: String, password: String) -> FutureResult<GuitarBuddyUser> {
+        let deferred = DeferredResult<GuitarBuddyUser>()
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let user = user,
+               error == nil {
+                let userId = user.uid
+                let user = GuitarBuddyUser(id: userId)
+                deferred.success(value: user)
+            } else {
+                // Invalid PW error code = 17009. Map this to user friendly text
+                deferred.failure(error: GuitarBuddyError.invalidServerResponse)
+            }
+        }
         return deferred
     }
     
