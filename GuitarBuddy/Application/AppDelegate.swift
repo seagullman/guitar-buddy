@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LaunchFlowControllerDelegate {
 
     var window: UIWindow?
     var launchFlowController: LaunchFlowController?
@@ -44,6 +44,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: - LaunchFlowControllerDelegate
+    
+    internal func signOut() {
+        let storyboard = UIStoryboard(name: "Initial", bundle: nil)
+        guard let viewController = storyboard.instantiateInitialViewController() else {
+            NSLog("Unable to instantiate initial view controller for storyboard: \(storyboard)")
+            abort()
+        }
+        self.window?.rootViewController = viewController
     }
 
 

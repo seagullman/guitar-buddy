@@ -13,4 +13,6 @@ fileprivate let fFirebaseUrlString = "https://guitar-buddy.firebaseio.com/"
 
 final public class Environment {
     static public let firebaseUrl = fFirebaseUrlString
+    static public let minimumPasswordLength = 8
+    
 }
