@@ -54,8 +54,9 @@ public class LoginViewController: UIViewController,
             switch result {
             case .success:
                 self.presentingViewController?.dismiss(animated: true, completion: nil)
-            case .failure:
-                self.presentError(message: "Oops, something went wrong. Please try again.")
+            case .failure(let error):
+                let errorText = ErrorMapper.errorMessage(forError: error)
+                self.presentError(message: errorText)
             }
         }
     }

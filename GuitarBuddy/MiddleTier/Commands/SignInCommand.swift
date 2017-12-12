@@ -33,7 +33,8 @@ public class SignInCommand {
                 deferred.success(value: true)
             case .failure(let error):
                 NSLog("ERROR: failed to sign user in. Error: \(error)")
-                deferred.failure(error: error)
+                let convertedError = ErrorMapper.convertToGBError(forError: error)
+                deferred.failure(error: convertedError)
             }
         }
         return deferred

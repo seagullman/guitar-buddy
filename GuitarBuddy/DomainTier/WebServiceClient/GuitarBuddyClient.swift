@@ -53,7 +53,7 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
                     deferred.success(value: response)
                 } else {
                     // User's uid is nil
-                    let error = GuitarBuddyError.invalidServerResponse
+                    let error = GuitarBuddyError.invalidResponse
                     deferred.failure(error: error)
                 }
             }
@@ -101,8 +101,9 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
                 let user = GuitarBuddyUser(id: userId)
                 deferred.success(value: user)
             } else {
-                // Invalid PW error code = 17009. Map this to user friendly text
-                deferred.failure(error: GuitarBuddyError.invalidServerResponse)
+                if let error = error {
+                    deferred.failure(error: error)
+                }
             }
         }
         return deferred
