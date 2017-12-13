@@ -32,6 +32,8 @@
 		44770E5D1FD8D0B800EFF597 /* MultTextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44770E5C1FD8D0B800EFF597 /* MultTextFieldValidator.swift */; };
 		44AD2BB41FDF5FF000A79F7B /* GBPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD2BB31FDF5FF000A79F7B /* GBPasswordValidator.swift */; };
 		44AD2BB71FDF605100A79F7B /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD2BB61FDF605100A79F7B /* ValidationError.swift */; };
+		44AD2BBB1FDF9ED400A79F7B /* SignInCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD2BBA1FDF9ED400A79F7B /* SignInCommand.swift */; };
+		44AD2BC11FE0428F00A79F7B /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD2BC01FE0428F00A79F7B /* ErrorMapper.swift */; };
 		44D2EB2F1FD901C200C3AFAB /* CreateAccountCoordinatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2EB2E1FD901C200C3AFAB /* CreateAccountCoordinatorViewController.swift */; };
 		44D2EB311FD901D200C3AFAB /* CreateAccountFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2EB301FD901D200C3AFAB /* CreateAccountFooterViewController.swift */; };
 		44D2EB331FD9026F00C3AFAB /* CreateAccountHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2EB321FD9026F00C3AFAB /* CreateAccountHeaderViewController.swift */; };
@@ -131,6 +133,8 @@
 		44770E5C1FD8D0B800EFF597 /* MultTextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultTextFieldValidator.swift; sourceTree = "<group>"; };
 		44AD2BB31FDF5FF000A79F7B /* GBPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBPasswordValidator.swift; sourceTree = "<group>"; };
 		44AD2BB61FDF605100A79F7B /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		44AD2BBA1FDF9ED400A79F7B /* SignInCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCommand.swift; sourceTree = "<group>"; };
+		44AD2BC01FE0428F00A79F7B /* ErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
 		44D2EB2E1FD901C200C3AFAB /* CreateAccountCoordinatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinatorViewController.swift; sourceTree = "<group>"; };
 		44D2EB301FD901D200C3AFAB /* CreateAccountFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountFooterViewController.swift; sourceTree = "<group>"; };
 		44D2EB321FD9026F00C3AFAB /* CreateAccountHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountHeaderViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 		440F88971FD86F8600806B5F /* MiddleTier */ = {
 			isa = PBXGroup;
 			children = (
+				44AD2BBE1FE0427E00A79F7B /* Helpers */,
 				440F889E1FD8700C00806B5F /* Commands */,
 				440F889D1FD8700800806B5F /* Models */,
 			);
@@ -321,6 +326,7 @@
 			children = (
 				44DBD8C71FD8A6DA0023D2CC /* CreateAccountCommand.swift */,
 				44F1B7E41FD9E390004A2850 /* ReadAuthenticationStateCommand.swift */,
+				44AD2BBA1FDF9ED400A79F7B /* SignInCommand.swift */,
 				44F1B7E61FD9E8E9004A2850 /* SignOutCommand.swift */,
 			);
 			path = Commands;
@@ -408,6 +414,14 @@
 				442B098F1FD872E8004EDF48 /* SPRingboardTests-iOS.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		44AD2BBE1FE0427E00A79F7B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				44AD2BC01FE0428F00A79F7B /* ErrorMapper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		63BE62AA2FD588FD33A1DD5F /* Pods */ = {
@@ -776,6 +790,7 @@
 				442B09A11FD87B6C004EDF48 /* InitialViewController.swift in Sources */,
 				442B099F1FD87A65004EDF48 /* NotificationName+GuitarBuddy.swift in Sources */,
 				44770E5D1FD8D0B800EFF597 /* MultTextFieldValidator.swift in Sources */,
+				44AD2BBB1FDF9ED400A79F7B /* SignInCommand.swift in Sources */,
 				442B099C1FD87988004EDF48 /* LaunchFlowController.swift in Sources */,
 				44DBD8CA1FD8AEF60023D2CC /* UIViewController+GuitarBuddy.swift in Sources */,
 				44AD2BB41FDF5FF000A79F7B /* GBPasswordValidator.swift in Sources */,
@@ -783,6 +798,7 @@
 				442B09B81FD8A0CD004EDF48 /* Environment.swift in Sources */,
 				442B09BE1FD8A3F9004EDF48 /* GuitarBuddyUser.swift in Sources */,
 				44D2EB331FD9026F00C3AFAB /* CreateAccountHeaderViewController.swift in Sources */,
+				44AD2BC11FE0428F00A79F7B /* ErrorMapper.swift in Sources */,
 				44D2EB2F1FD901C200C3AFAB /* CreateAccountCoordinatorViewController.swift in Sources */,
 				44DBD8C61FD8A4BB0023D2CC /* GuitarBuddyError.swift in Sources */,
 				44F1B7E51FD9E390004A2850 /* ReadAuthenticationStateCommand.swift in Sources */,
