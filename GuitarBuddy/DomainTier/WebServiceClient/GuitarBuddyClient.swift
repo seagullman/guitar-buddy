@@ -20,6 +20,7 @@ public enum AuthState {
 internal protocol GuitarBuddyClient: class {
     func createUser(fromRequest request: CreateAccountRequest) -> FutureResult<CreateUserResponse>
     func getAuthenticationState() -> FutureResult<AuthState>
+    func getUsersSongs() -> FutureResult<[Song]>
     func register(fromResponse response: CreateUserResponse) -> FutureResult<Bool>
     func signIn(withEmail email: String, password: String) -> FutureResult<GuitarBuddyUser>
     func signOut() -> Bool
@@ -71,6 +72,42 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
             }
         }
         Auth.auth().removeStateDidChangeListener(handle)
+        return deferred
+    }
+    
+    internal func getUsersSongs() -> FutureResult<[Song]> {
+        let deferred = DeferredResult<[Song]>()
+        
+        guard let userId = Auth.auth().currentUser?.uid else {
+            NSLog("FATAL: getUsersSongs -- Unable to retrieve current user uid from auth object.")
+            abort()
+        }
+        
+        let ref = Database.database().reference(fromURL: Environment.firebaseUrl)
+        let userRef = ref.child("users").child(userId)
+        let songsRef = ref.child("songs")
+        let userSongsRef = userRef.child("songs").queryOrderedByValue().queryEqual(toValue: true)
+        var songs = [Song]()
+        
+        userSongsRef.observeSingleEvent(of: .value) { (userSongSnapshot) in
+            guard
+                let snaps = userSongSnapshot.children.allObjects as? [DataSnapshot],
+                snaps.count > 0
+            else {
+                return deferred.success(value: songs)
+            }
+            
+            snaps.forEach({ (songSnapshot) in
+                songsRef.child(songSnapshot.key).observeSingleEvent(of: .value, with: { (indvSongSnap) in
+                    let song = Song(snapshot: indvSongSnap)
+                    songs.append(song)
+                    
+                    if songs.count == snaps.count {
+                        deferred.success(value: songs)
+                    }
+                })
+            })
+        }
         return deferred
     }
     
