@@ -12,14 +12,13 @@
         <!--Login View Controller-->
         <scene sceneID="0VK-IS-UQP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n8M-gj-uhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="XTO-34-iwH" customClass="LoginViewController" customModule="GuitarBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mec-Th-jZ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjY-qs-UNT">
-                                <rect key="frame" x="16" y="593" width="343" height="54"/>
+                                <rect key="frame" x="16" y="274" width="343" height="54"/>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.65456814236111116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="cj7-0W-mUK"/>
@@ -78,7 +77,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-lb-BYb">
-                                <rect key="frame" x="16" y="525" width="343" height="54"/>
+                                <rect key="frame" x="16" y="206" width="343" height="54"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.65456814240000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Kjg-C1-67U"/>
@@ -100,7 +99,7 @@
                             <constraint firstItem="KjY-qs-UNT" firstAttribute="leading" secondItem="NAy-O3-PnI" secondAttribute="leading" constant="16" id="I56-sd-BKS"/>
                             <constraint firstItem="7eR-lb-BYb" firstAttribute="leading" secondItem="NAy-O3-PnI" secondAttribute="leading" constant="16" id="euv-kf-Qdg"/>
                             <constraint firstItem="NAy-O3-PnI" firstAttribute="trailing" secondItem="KjY-qs-UNT" secondAttribute="trailing" constant="16" id="fYd-wN-nAd"/>
-                            <constraint firstItem="NAy-O3-PnI" firstAttribute="bottom" secondItem="KjY-qs-UNT" secondAttribute="bottom" constant="20" id="pbm-Pv-Oeg"/>
+                            <constraint firstItem="7eR-lb-BYb" firstAttribute="top" secondItem="uKd-Zj-Wce" secondAttribute="bottom" constant="10" id="hpH-Tf-fUb"/>
                             <constraint firstItem="KjY-qs-UNT" firstAttribute="top" secondItem="7eR-lb-BYb" secondAttribute="bottom" constant="14" id="r4v-Gi-itt"/>
                             <constraint firstItem="PhV-hd-hAN" firstAttribute="top" secondItem="NAy-O3-PnI" secondAttribute="top" constant="35" id="t76-vE-jlH"/>
                             <constraint firstItem="NAy-O3-PnI" firstAttribute="trailing" secondItem="7eR-lb-BYb" secondAttribute="trailing" constant="16" id="zZQ-9F-cgw"/>
@@ -114,6 +113,7 @@
                         <outlet property="passwordTextField" destination="uKd-Zj-Wce" id="XhE-zW-hpr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8M-gj-uhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030" y="-635"/>
         </scene>
