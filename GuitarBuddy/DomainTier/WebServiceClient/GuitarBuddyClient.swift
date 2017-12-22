@@ -18,6 +18,7 @@ public enum AuthState {
 }
 
 internal protocol GuitarBuddyClient: class {
+    func createSong(fromRequest request: CreateSongRequest) -> FutureResult<Bool>
     func createUser(fromRequest request: CreateAccountRequest) -> FutureResult<CreateUserResponse>
     func getAuthenticationState() -> FutureResult<AuthState>
     func getUsersSongs() -> FutureResult<[Song]>
@@ -38,6 +39,28 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
     public static let shared: NetworkGuitarBuddyClient = sharedNetworkClient
     
     // MARK: - GuitarBuddyClient
+    
+    internal func createSong(fromRequest request: CreateSongRequest) -> FutureResult<Bool> {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            NSLog("FATAL: getUsersSongs -- Unable to retrieve current user uid from auth object.")
+            abort()
+        }
+        
+        let deferred = DeferredResult<Bool>()
+        let ref = Database.database().reference(fromURL: Environment.firebaseUrl)
+        let userRef = ref.child("users").child(userId)
+        let songsRef = ref.child("songs")
+        songsRef.childByAutoId().setValue(request.toDictionary()) { (error, reference) in
+            if let error = error {
+                deferred.failure(error: error)
+            } else {
+                let key = reference.key
+                userRef.child("songs").child(key).setValue(true)
+                deferred.success(value: true)
+            }
+        }
+        return deferred
+    }
     
     internal func createUser(fromRequest request: CreateAccountRequest) -> FutureResult<CreateUserResponse> {
         let deferred = DeferredResult<CreateUserResponse>()

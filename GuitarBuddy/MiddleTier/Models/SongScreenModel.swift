@@ -20,7 +20,7 @@ public struct SongScreenModel {
     public var artistImage: String {
         // TODO:
         //return self.song.artistImage
-        return ""
+        return "artistPlaceholder"
     }
     
     public var songName: String {

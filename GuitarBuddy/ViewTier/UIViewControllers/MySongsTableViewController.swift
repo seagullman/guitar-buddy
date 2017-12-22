@@ -10,7 +10,7 @@ import UIKit
 import SPRingboard
 
 
-public class MySongsTableViewController: SPRTableViewController {
+public class MySongsTableViewController: SPRTableViewController, AddSongDelegate {
     
     // MARK: - UIViewController
     
@@ -19,6 +19,20 @@ public class MySongsTableViewController: SPRTableViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.tintColor = .white
         self.navigationItem.searchController = searchController
+    }
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "showAddNewSong":
+            guard let destination = segue.destination as? AddSongTableViewController else { return }
+            
+            destination.delegate = self
+        default:
+            NSLog("Unrecognized identifier is sent: \(identifier)")
+            abort()
+        }
     }
 
     // MARK: - SPRTableViewController
@@ -76,6 +90,12 @@ public class MySongsTableViewController: SPRTableViewController {
         if success {
             dismiss(animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - AddSongDelegate
+    
+    public func songAdded() {
+        setNeedsModelLoaded()
     }
     
 }
