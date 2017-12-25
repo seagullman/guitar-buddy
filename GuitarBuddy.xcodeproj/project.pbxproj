@@ -54,6 +54,7 @@
 		61223C401FEC2D2C00BFBAF0 /* GuitarBuddyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61223C3F1FEC2D2C00BFBAF0 /* GuitarBuddyButton.swift */; };
 		61223C421FECD45200BFBAF0 /* CreateSongRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61223C411FECD45200BFBAF0 /* CreateSongRequest.swift */; };
 		61BEEE121FED731200D027CF /* CreateSongCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEEE111FED731200D027CF /* CreateSongCommand.swift */; };
+		61D2C50B1FF17DE100A75AAD /* MySongs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D2C50A1FF17DE100A75AAD /* MySongs.storyboard */; };
 		61F6C20B1FE31A5800630DC2 /* MySongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6C20A1FE31A5800630DC2 /* MySongsTableViewController.swift */; };
 		76E493BC3A9F47A27AF9902C /* Pods_GuitarBuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887E73AEDB2ECC7BBE10482F /* Pods_GuitarBuddyUITests.framework */; };
 		D737A225D27A788791EB79E4 /* Pods_GuitarBuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCFD18386EDAC88B0E2BF8D /* Pods_GuitarBuddyTests.framework */; };
@@ -166,6 +167,7 @@
 		61223C3F1FEC2D2C00BFBAF0 /* GuitarBuddyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarBuddyButton.swift; sourceTree = "<group>"; };
 		61223C411FECD45200BFBAF0 /* CreateSongRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSongRequest.swift; sourceTree = "<group>"; };
 		61BEEE111FED731200D027CF /* CreateSongCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSongCommand.swift; sourceTree = "<group>"; };
+		61D2C50A1FF17DE100A75AAD /* MySongs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MySongs.storyboard; sourceTree = "<group>"; };
 		61F6C20A1FE31A5800630DC2 /* MySongsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySongsTableViewController.swift; sourceTree = "<group>"; };
 		67C86E8E7BEE731E94826030 /* Pods-GuitarBuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuitarBuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuitarBuddyTests/Pods-GuitarBuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		887E73AEDB2ECC7BBE10482F /* Pods_GuitarBuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuitarBuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,6 +403,7 @@
 				442B09A21FD87BC6004EDF48 /* Initial.storyboard */,
 				442B09A41FD87C36004EDF48 /* Setup.storyboard */,
 				442B09A61FD87C80004EDF48 /* Authenticated.storyboard */,
+				61D2C50A1FF17DE100A75AAD /* MySongs.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -559,7 +562,7 @@
 				TargetAttributes = {
 					440F88631FD86ED400806B5F = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					440F88771FD86ED400806B5F = {
 						CreatedOnToolsVersion = 9.1;
@@ -622,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				442B09A51FD87C36004EDF48 /* Setup.storyboard in Resources */,
+				61D2C50B1FF17DE100A75AAD /* MySongs.storyboard in Resources */,
 				440F88721FD86ED400806B5F /* LaunchScreen.storyboard in Resources */,
 				440F88A81FD8708E00806B5F /* update_acknowledgements_html.sh in Resources */,
 				442B09961FD87837004EDF48 /* GoogleService-Info.plist in Resources */,
@@ -1011,12 +1015,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GREW8M86PK;
 				INFOPLIST_FILE = "$(SRCROOT)/GuitarBuddy/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.seagullman.GuitarBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagullman.GuitarBuddyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -1031,12 +1035,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GREW8M86PK;
 				INFOPLIST_FILE = "$(SRCROOT)/GuitarBuddy/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.seagullman.GuitarBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagullman.GuitarBuddyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
