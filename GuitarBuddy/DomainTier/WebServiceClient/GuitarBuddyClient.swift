@@ -24,7 +24,7 @@ internal protocol GuitarBuddyClient: class {
     func getUsersSongs() -> FutureResult<[Song]>
     func register(fromResponse response: CreateUserResponse) -> FutureResult<Bool>
     func signIn(withEmail email: String, password: String) -> FutureResult<GuitarBuddyUser>
-    func signOut() -> Bool
+    func signOut() -> FutureResult<Bool>
 }
 
 fileprivate let sharedNetworkClient = NetworkGuitarBuddyClient()
@@ -169,14 +169,18 @@ internal class NetworkGuitarBuddyClient: GuitarBuddyClient {
         return deferred
     }
     
-    internal func signOut() -> Bool {
+    internal func signOut() -> FutureResult<Bool> {
+        let result: Result<Bool>
         do {
             try Auth.auth().signOut()
-            return true
+            result = Result<Bool>.success(true)
         } catch (let error) {
             NSLog("ERROR: unable to sign user out: \(error)")
-            return false
+            result = Result<Bool>.success(true)
         }
+        let deferred = DeferredResult<Bool>()
+        deferred.fill(result: result)
+        return deferred
     }
     
 }

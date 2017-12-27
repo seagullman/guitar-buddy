@@ -86,9 +86,19 @@ public class MySongsTableViewController: SPRTableViewController, AddSongDelegate
     
     @IBAction func signOut(_ sender: Any) {
         let command = SignOutCommand()
-        let success = command.execute()
-        if success {
-            dismiss(animated: true, completion: nil)
+        command.execute()
+            .then { (result) in
+                switch result {
+                case .success(let success):
+                    if success {
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        // TODO: handle error
+                    }
+                case .failure(let error):
+                    NSLog("ERROR: Failed to sign out with error: \(error)")
+                    // TODO: handler error
+                }
         }
     }
     

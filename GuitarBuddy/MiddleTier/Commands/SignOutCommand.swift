@@ -12,9 +12,9 @@ import SPRingboard
 
 public class SignOutCommand {
     
-    private let signOut: (() -> Bool)
+    private let signOut: (() -> FutureResult<Bool>)
     
-    internal init(signOut: @escaping () -> Bool) {
+    internal init(signOut: @escaping () -> FutureResult<Bool>) {
         self.signOut = signOut
     }
     
@@ -24,7 +24,7 @@ public class SignOutCommand {
         self.init(signOut: signOut)
     }
     
-    public func execute() -> Bool  {
+    @discardableResult public func execute() -> FutureResult<Bool>  {
         return self.signOut()
     }
     

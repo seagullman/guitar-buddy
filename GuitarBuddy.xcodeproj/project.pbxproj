@@ -399,11 +399,11 @@
 		440F88A31FD8704200806B5F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				440F88701FD86ED400806B5F /* LaunchScreen.storyboard */,
-				442B09A21FD87BC6004EDF48 /* Initial.storyboard */,
-				442B09A41FD87C36004EDF48 /* Setup.storyboard */,
 				442B09A61FD87C80004EDF48 /* Authenticated.storyboard */,
+				442B09A21FD87BC6004EDF48 /* Initial.storyboard */,
 				61D2C50A1FF17DE100A75AAD /* MySongs.storyboard */,
+				442B09A41FD87C36004EDF48 /* Setup.storyboard */,
+				440F88701FD86ED400806B5F /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -426,10 +426,10 @@
 		440F88A51FD8705900806B5F /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
+				61223C3F1FEC2D2C00BFBAF0 /* GuitarBuddyButton.swift */,
+				61223C3D1FEC25A700BFBAF0 /* GuitarBuddyTextField.swift */,
 				610363FD1FE337D000DBD222 /* MySongsTableViewCell.swift */,
 				610363FF1FE345BF00DBD222 /* ShadowView.swift */,
-				61223C3D1FEC25A700BFBAF0 /* GuitarBuddyTextField.swift */,
-				61223C3F1FEC2D2C00BFBAF0 /* GuitarBuddyButton.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
